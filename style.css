@@ -1,0 +1,210 @@
+/* Resetting default margins and paddings for various elements */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the overall body of the document */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font stack chosen for readability */
+    background-color: #f8f9fa; /* Light background color */
+    color: #333; /* Text color */
+}
+
+/* Styling for the header element */
+header {
+    background-color: #007bff; /* Header background color */
+    color: #fff; /* Header text color */
+    text-align: center; /* Center-aligning text */
+    padding: 40px 0; /* Padding for top and bottom */
+    position: relative; /* Relative positioning for child elements */
+    box-shadow: 0 8px 16px 0 #ff00ff; /* Shadow effect */
+}
+
+/* Styling for navigation list */
+nav ul {
+    list-style-type: none; /* Removing default list styles */
+}
+
+/* Styling for navigation list items */
+nav ul li {
+    display: inline; /* Displaying list items inline */
+    margin-right: 20px; /* Adding right margin between list items */
+}
+
+/* Styling for navigation links */
+nav ul li a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Removing default underline */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #ffd700; /* Changing text color on hover */
+}
+
+/* Styling for the main content area */
+main {
+    padding: 40px 20px; /* Padding for top and bottom */
+}
+
+/* Styling for sections */
+section {
+    margin-bottom: 60px; /* Bottom margin between sections */
+    text-align: center; /* Center-aligning text */
+    opacity: 0; /* Setting initial opacity to 0 for animation */
+    animation: fadeIn 3s ease-in-out forwards; /* Animation effect for section */
+}
+
+/* Styling for even sections */
+section:nth-child(even) {
+    animation-delay: 0.5s; /* Delay for even sections animation */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Starting opacity */
+        transform: translateY(20px); /* Starting position */
+    }
+    to {
+        opacity: 1; /* Ending opacity */
+        transform: translateY(0); /* Ending position */
+    }
+}
+
+/* Styling for unordered lists inside #services */
+#services ul {
+    list-style-type: none; /* Removing default list styles */
+}
+
+/* Styling for elements inside #Animate */
+#Animate {
+    display: flex; /* Displaying children elements as flex */
+    justify-content: space-evenly; /* Evenly distributing space between children */
+}
+
+/* Styling for elements #Animate1 and #Animate2 */
+#Animate1, #Animate2 {
+    width: 300px; /* Width of elements */
+    height: 300px; /* Height of elements */
+    background-color: #6bb0fb; /* Background color */
+    font-size: 2em; /* Font size */
+    text-align: center; /* Center-aligning text */
+    animation-name: slideLeft; /* Animation effect */
+    animation-duration: 6s; /* Duration of animation */
+    box-shadow: 0 8px 16px 0 #ff00ff; /* Shadow effect */
+}
+
+/* Styling for elements #Animate3 and #Animate4 */
+#Animate3, #Animate4 {
+    width: 300px; /* Width of elements */
+    height: 300px; /* Height of elements */
+    background-color: #6bb0fb; /* Background color */
+    font-size: 2em; /* Font size */
+    text-align: center; /* Center-aligning text */
+    animation-name: slideRight; /* Animation effect */
+    animation-duration: 6s; /* Duration of animation */
+    box-shadow: 0 8px 16px 0 #ff00ff; /* Shadow effect */
+}
+
+/* Keyframes for slide-left animation */
+@keyframes slideLeft {
+    from {
+        transform: translateX(600%); /* Starting position */
+    }
+}
+
+/* Keyframes for slide-right animation */
+@keyframes slideRight {
+    from {
+        transform: translateX(-600%); /* Starting position */
+    }
+}
+
+/* Styling for images inside div */
+div img {
+    display: block; /* Displaying images as block elements */
+    margin-left: 1em; /* Left margin */
+    margin-top: 1em; /* Top margin */
+    width: 7em; /* Width of images */
+}
+
+/* Hover effect for images */
+div img:hover {
+    box-shadow: 0 8px 16px 0 #ffd700; /* Shadow effect on hover */
+}
+
+/* Styling for #ani11 */
+#ani11 {
+    animation-name: slidebottom; /* Animation effect */
+    animation-duration: 12s; /* Duration of animation */
+}
+
+/* Styling for #ani22 */
+#ani22 {
+    animation-name: slidetop; /* Animation effect */
+    animation-duration: 12s; /* Duration of animation */
+}
+
+/* Keyframes for slide-top animation */
+@keyframes slidetop {
+    from {
+        transform: translateY(1200%); /* Starting position */
+    }
+}
+
+/* Keyframes for slide-bottom animation */
+@keyframes slidebottom {
+    from {
+        transform: translateY(-1200%); /* Starting position */
+    }
+}
+/* Styling for #contact */
+#contact {
+    margin-top: 2em; /* Top margin */
+}
+
+/* Styling for footer */
+footer {
+    background-color: #333; /* Footer background color */
+    color: #fff; /* Footer text color */
+    text-align: center; /* Center-aligning text */
+    padding: 20px; /* Padding for top and bottom */
+}
+
+/* Media Queries for responsive design */
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    header {
+        padding: 20px 0; /* Reduced padding for header */
+    }
+
+    nav ul li {
+        display: block; /* Displaying list items as block */
+        margin: 10px 0; /* Margin for list items */
+    }
+
+    main {
+        padding: 20px; /* Reduced padding for main content */
+    }
+
+    /* Adjustments for smaller screens */
+    #Animate {
+        flex-direction: column; /* Change flex direction to column for stacking */
+        align-items: center; /* Center-align items vertically */
+    }
+    
+    #Animate > div {
+        width: calc(100% - 20px); /* Full width minus margin */
+    }
+
+    section {
+        margin-bottom: 40px; /* Reduced margin between sections */
+    }
+
+    footer {
+        padding: 10px; /* Reduced padding for footer */
+    }
+}
